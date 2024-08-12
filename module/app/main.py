@@ -15,7 +15,7 @@ basic_auth = BasicAuth(app)
 
 @app.route('/')
 def home():
-    return "TESTE DOCKER"
+    return "ML OPS AUTOMATED DEPLOY"
 
 @app.route('/sentimento/<frase>')
 @basic_auth.required
