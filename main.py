@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_basicauth import BasicAuth
 from textblob import TextBlob
+from collections.abc import Sequence
 from sklearn.linear_model import LinearRegression
 import pickle
 import os
@@ -15,7 +16,7 @@ basic_auth = BasicAuth(app)
 
 @app.route('/')
 def home():
-    return "TESTE DOCKER"
+    return "teste GCP"
 
 @app.route('/sentimento/<frase>')
 @basic_auth.required
@@ -33,4 +34,5 @@ def cotacao():
     preco = modelo.predict([dados_input])
     return jsonify(preco=preco[0])
 
-app.run(debug=True, host = '0.0.0.0')
+if __name__== '__main__':
+    app.run(debug=True, host = '0.0.0.0')

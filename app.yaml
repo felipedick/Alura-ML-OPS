@@ -1,0 +1,13 @@
+runtime: python
+env: flex
+#entrypoint: waitress-serve --listen=*:5000 main:app
+entrypoint: gunicorn -b :$PORT main:app
+
+
+runtime_config:
+  operating_system: "ubuntu22"
+  runtime_version: "3.10"
+
+
+includes:
+- env_vars.yaml
