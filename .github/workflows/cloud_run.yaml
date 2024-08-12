@@ -44,7 +44,7 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
-        credentials_json: '${{ secrets.GCPgit add . _CREDENTIALS }}'
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
     # Setup gcloud CLI
     - name: Set up Cloud SDK
